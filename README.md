@@ -43,9 +43,11 @@ To build the application, follow these steps:
    and buyer accounts.
 
    - Download Postman (Desktop Agent, since this is necessary when executing on localhost): https://www.postman.com/downloads/
-   - Open the public workspace: https://www.postman.com/austinosborn/workspace/tekmetric-project
-   - In the environment drop-down (top-right), select the "Demonstration" environment. This prepopulates {{backendURL}} as `http://localhost:8080`, which is 
-     the listening port for this application.
+   - Login to account
+   - Create a fork from the public workspace: https://www.postman.com/austinosborn/workspace/tekmetric-project/collection/37548752-6237de14-7b18-46d3-88cb-25ed6a008fd6/fork?origin=request-send
+     - During fork creation step, select the "Demonstration" environment variables. This prepopulates {{backendURL}} as `http://localhost:8080`.
+   - Open Postman desktop app and navigate to your fork.
+   - From there you should be configured properly to run through the API.
 
 ## Postman Usage
 
