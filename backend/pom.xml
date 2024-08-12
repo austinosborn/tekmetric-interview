@@ -10,7 +10,7 @@
 
 
     <properties>
-        <java.version>22</java.version>
+        <java.version>17</java.version>
         <spring.version>3.3.2</spring.version>
         <h2.version>2.3.230</h2.version>
         <maven.compiler.plugin.version>3.13.0</maven.compiler.plugin.version>
@@ -124,12 +124,7 @@
             <version>${hamcrest.version}</version>
             <scope>test</scope>
         </dependency>
-
-
-
     </dependencies>
-
-
 
     <build>
         <plugins>
@@ -148,6 +143,5 @@
             </plugin>
         </plugins>
     </build>
-
 
 </project>
