@@ -8,5 +8,5 @@ public interface CartItemRepository extends JpaRepository<CartItem, Long> {
 
   Optional<CartItem> findByExternalId(String externalId);
 
-  int deleteByExternalId(String externalId);
+  void deleteByExternalId(String externalId);
 }

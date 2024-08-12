@@ -56,7 +56,7 @@ public class CartItem {
 
   @PrePersist
   @PreUpdate
-  private void updateTotalPrice() {
+  public void updateTotalPrice() {
     if (product != null) {
       this.totalPrice = product.getPrice().multiply(BigDecimal.valueOf(quantity));
     }

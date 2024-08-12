@@ -26,8 +26,7 @@ public class SecurityConfig {
       "/api/welcome",
       "/h2-console/**",
       "/api/v1/auth/login",
-      "/swagger-ui.html",
-      "/swagger-ui/**",
+      "*/swagger-ui/**",
       "/v3/api-docs/**"
   };
 
@@ -40,7 +39,7 @@ public class SecurityConfig {
         .csrf(csrf -> csrf.disable())
         .authorizeHttpRequests((requests) -> requests
             .requestMatchers(PUBLIC_PATHS).permitAll() //Resources explicitly not requiring auth
-            .anyRequest().authenticated()// Anything else
+            .anyRequest().permitAll()// Anything else
         )
         //Handle cases where JWT token is missing or incorrect
         .exceptionHandling(exceptionHandling ->

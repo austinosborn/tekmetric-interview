@@ -1,4 +1,4 @@
-# Online Auto Shop Spring Boot Application
+# Auto Shop SpringBoot Demo Application
 
 ## Overview
 
@@ -32,7 +32,7 @@ To build the application, follow these steps:
    Open a terminal and navigate to the root directory of the project.
 
    ```bash
-   cd /backend
+   cd backend
    mvn clean install spring-boot:run
 
 # Demo
@@ -55,6 +55,8 @@ To build the application, follow these steps:
    3. Cart
 
    You can navigate between these and interact with the API as you wish. There are various examples spread throughout to demonstrate handling of sad path outcomes (non 200 responses).
+
+   Swagger reference can also be found here: http://localhost:8080/swagger-ui/index.html
 
 ### Login
 
@@ -114,5 +116,9 @@ cart response, and deducts the purchased quantity from the respective product li
 ### 7. **Exception Handling**
 - **Custom Exceptions**: Handles exceptions such as `NotFoundException` for better error management and user feedback. Any unexpected application error is 
  returned as a 500 with a unique error ID, and is logged with the corresponding error to make debugging easier.
+
+### 8. **Swagger Documentation (OpenAPI Specification)**
+- **Annotation-based documentation**: Using the library `springdoc-openapi-starter-webmvc-ui`, we can use various annotations inside the controllers and within
+    response/response payloads in order to easily generate Swagger documentation for the API. This resource for the application can be found at: http://localhost:8080/swagger-ui/index.html
 
 
