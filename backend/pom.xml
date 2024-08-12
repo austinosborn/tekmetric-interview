@@ -20,6 +20,9 @@
         <mapstruct.version>1.5.5.Final</mapstruct.version>
         <apache.commons.version>3.16.0</apache.commons.version>
         <springdoc.version>2.3.0</springdoc.version>
+
+        <mockito.version>5.12.0</mockito.version>
+        <hamcrest.version>3.0</hamcrest.version>
     </properties>
 
     <parent>
@@ -27,6 +30,18 @@
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.3.2</version>
     </parent>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.junit</groupId>
+                <artifactId>junit-bom</artifactId>
+                <version>5.10.1</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
         <dependency>
@@ -90,6 +105,26 @@
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
             <version>${springdoc.version}</version>
         </dependency>
+<!--        Testing Dependencies-->
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>${mockito.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <version>${mockito.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-library</artifactId>
+            <version>${hamcrest.version}</version>
+            <scope>test</scope>
+        </dependency>
+
 
 
     </dependencies>

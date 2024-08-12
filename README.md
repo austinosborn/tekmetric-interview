@@ -121,4 +121,13 @@ cart response, and deducts the purchased quantity from the respective product li
 - **Annotation-based documentation**: Using the library `springdoc-openapi-starter-webmvc-ui`, we can use various annotations inside the controllers and within
     response/response payloads in order to easily generate Swagger documentation for the API. This resource for the application can be found at: http://localhost:8080/swagger-ui/index.html
 
+### 9. **Tests & Mocking**
+- **Mockito**: Using the libraries  `Mockito` and `Junit 5`, we can unit test the methods of our various services and generated implementation classes. For this demo,
+  I've written some simple unit tests for the `ProductApiService` and the `ProductMapper`.
+  - These tests can be run with `mvn clean test`.
+  - Component tests have not been included in this demo, but they are a good practice to add a level of confidence over standard unit tests. 
+    Libraries such as `TestContainers` and `WireMock` can be helpful in setting this up. The concept is to run a mock server of the application itself, and 
+    make API calls directly into the application from the test cases. Matching results against expected JSON results and querying respositories for pre and post-conditions are some 
+    validation methods used with those.
+
 
