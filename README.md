@@ -26,7 +26,7 @@ To build the application, follow these steps:
 1. **Clone the Repository**
 
    ```bash
-   git clone git@github.com:austinosborn/tekmetric-interview.git
+   git clone https://github.com/austinosborn/tekmetric-interview.git
 
 2. **Navigate to the Project Directory and run**:
    Open a terminal and navigate to the root directory of the project.
